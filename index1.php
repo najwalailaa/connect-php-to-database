@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>tugas</title>
+    <title>PEMWEB</title>
     <!-- load css boostrap -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/dashboard.css" rel="stylesheet">
@@ -22,11 +22,14 @@
         <nav class="col-md-2 d-none d-md-block bg-light sidebar">
           <div class="sidebar-sticky">
             <ul class="nav flex-column" style="margin-top:100px;">
+            <li class="nav-item">
+                <a class="nav-link active" href="<?php echo "index1.php"; ?>">Data Perusahaan</a>
+                <ul class="nav flex-column">
                <li class="nav-item">
-                <a class="nav-link active" href="<?php echo "index.php"; ?>">Data Customers</a>
+                <a class="nav-link active" href="<?php echo "FormCustomers.php"; ?>">Input Data Customers</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="<?php echo "form.php"; ?>">Tambah Data</a>
+                <a class="nav-link" href="<?php echo "FormProducts.php"; ?>">Input Data Product</a>
               </li>
             </ul>
           </div>
@@ -90,9 +93,9 @@
                     <td><?php echo $data['salesRepEmployeeNumber'];  ?></td>
                     <td><?php echo $data['creditLimit'];  ?></td>
                     <td>
-                      <a href="<?php echo "update.php?nrp=".$data['cutomerCode']; ?>" class="btn btn-outline-warning btn-sm"> Update</a>
+                      <a href="<?php echo "UpdateCustomers.php?customerNumber=".$data['customerNumber']; ?>" class="btn btn-outline-warning btn-sm"> Update</a>
                       &nbsp;&nbsp;
-                      <a href="<?php echo "delete.php?nrp=".$data['customerCode']; ?>" class="btn btn-outline-danger btn-sm"> Delete</a> 
+                      <a href="<?php echo "DeleteCustomers.php?customerNumber".$data['customerNumber']; ?>" class="btn btn-outline-danger btn-sm"> Delete</a> 
                     </td>
                   </tr>
                  <?php endwhile ?>
@@ -138,9 +141,9 @@
                     <td><?php echo $data['buyPrice'];  ?></td>
                     <td><?php echo $data['MSRP'];  ?></td>
                     <td>
-                      <a href="<?php echo "update.php?nrp=".$data['productCode']; ?>" class="btn btn-outline-warning btn-sm"> Update</a>
+                      <a href="<?php echo "UpdateProducts.php?productCode".$data['productCode']; ?>" class="btn btn-outline-warning btn-sm"> Update</a>
                       &nbsp;&nbsp;
-                      <a href="<?php echo "delete.php?nrp=".$data['productCode']; ?>" class="btn btn-outline-danger btn-sm"> Delete</a> 
+                      <a href="<?php echo "DeleteProducts.php?productCode".$data['productCode']; ?>" class="btn btn-outline-danger btn-sm"> Delete</a> 
                     </td>
                   </tr>
                  <?php endwhile ?>
